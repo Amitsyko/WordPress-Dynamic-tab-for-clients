@@ -16,7 +16,7 @@
       justify-content: space-between;
      
     }
-    .bebo{
+    .navi{
       width: 20rem;
   /*    margin: 5rem;*/
   /*    border: 0.1px solid black;*/
@@ -71,12 +71,12 @@
           box-shadow: 3px 4px 11px -1px;
     }
 
-    .stro{
+    .strong{
       font-weight:400;
       font-size: 13px;
     }
 
-    .lig{
+    .light{
       font-weight:400;
       font-size: 11px;
       padding-left: 2rem;
@@ -243,11 +243,11 @@ div#prog {
               ?>
 
                       <div class="col-lg-4 mb-5">
-                          <div class="bebo">
-                              <div class="main">
-                                  <p class="emo-<?php echo $post_id; ?> active  temp1">Client</p>
-                                  <p class="emo1-<?php echo $post_id; ?> temp2">Personal</p>
-                                  <p class="emo2-<?php echo $post_id; ?> temp3">Demo</p>
+                          <div class="navi">
+                              <div class="main">  
+                                  <p class="client-<?php echo $post_id; ?> active client1">Client</p>
+                                  <p class="personal-<?php echo $post_id; ?> personal2">Personal</p>
+                                  <p class="demo-<?php echo $post_id; ?> demo3">Demo</p>
                               </div>
                               <hr>
                               <center>
@@ -269,18 +269,18 @@ div#prog {
 
                                           <table>   
                                             <tr>
-                          <td class="stro"><?php the_field('years_in_industry');?></td>
-                                              <td class="lig"><?php the_field('8_years');?> years</td>
+                          <td class="strong"><?php the_field('years_in_industry');?></td>
+                                              <td class="light"><?php the_field('8_years');?> years</td>
                                             </tr>
                                             
                                              <tr class="tab">
-                          <td class="stro"><?php the_field('favorite_cloudnine@_software');?></td>
-                                              <td class="lig"><?php the_field('cloudnine_review');?></td>
+                          <td class="strong"><?php the_field('favorite_cloudnine@_software');?></td>
+                                              <td class="light"><?php the_field('cloudnine_review');?></td>
                                             </tr>
                                            
                                             <tr class="tab">
-                          <td class="stro"><?php the_field('favorite_thing_about_coludnine@');?></td>
-                                              <td class="lig"><?php the_field('customer_focus_is_in_its_dna');?></td>
+                          <td class="strong"><?php the_field('favorite_thing_about_coludnine@');?></td>
+                                              <td class="light"><?php the_field('customer_focus_is_in_its_dna');?></td>
                                             </tr>
                                           </table>
                                         </div> 
@@ -302,28 +302,28 @@ div#prog {
 
                                          <table>
                                           <tr>
-                                            <td class="stro"><?php the_field('sports_team');?></td>
-                                            <td class="lig"><?php the_field('anything_vegetarian');?></td>
+                                            <td class="strong"><?php the_field('sports_team');?></td>
+                                            <td class="light"><?php the_field('anything_vegetarian');?></td>
                                           </tr>
                                           
                                            <tr class="tab">
-                                            <td class="stro"><?php the_field('food');?></td>
-                                            <td class="lig"><?php the_field('charlie_and_the_chocolate_factory');?></td>
+                                            <td class="strong"><?php the_field('food');?></td>
+                                            <td class="light"><?php the_field('charlie_and_the_chocolate_factory');?></td>
                                           </tr>
                                          
                                           <tr class="tab">
-                                            <td class="stro"><?php the_field('movie');?></td>
-                                            <td class="lig"><?php the_field('ping_pong');?></td>
+                                            <td class="strong"><?php the_field('movie');?></td>
+                                            <td class="light"><?php the_field('ping_pong');?></td>
                                           </tr>
 
                                           <tr class="tab">
-                                            <td class="stro"><?php the_field('book');?></td>
-                                            <td class="lig"><?php the_field('cooking');?></td>
+                                            <td class="strong"><?php the_field('book');?></td>
+                                            <td class="light"><?php the_field('cooking');?></td>
                                           </tr>
 
                                           <tr class="tab">
-                                            <td class="stro"><?php the_field('hobby');?></td>
-                                            <td class="lig"><?php the_field('games');?></td>
+                                            <td class="strong"><?php the_field('hobby');?></td>
+                                            <td class="light"><?php the_field('games');?></td>
                                           </tr>
                                         </table>
                                       </div> 
@@ -350,8 +350,8 @@ div#prog {
                                         
                                         <table>
                                           <tr>
-                                            <td class="stro"><?php the_field('fav_hero');?></td>
-                                            <td class="lig"><?php the_field('superman');?></td>
+                                            <td class="strong"><?php the_field('fav_hero');?></td>
+                                            <td class="light"><?php the_field('superman');?></td>
                                           </tr>
                                           
                                           
@@ -385,26 +385,26 @@ div#prog {
                       $post_id = get_the_ID(); // Get the post ID
               ?>
                       // Initially, only the Client content is visible
-                      $(".emo-<?php echo $post_id; ?>").addClass("active");
+                      $(".client-<?php echo $post_id; ?>").addClass("active");
                       $("#div1-<?php echo $post_id; ?>").show();
                       $("#div2-<?php echo $post_id; ?>, #div3-<?php echo $post_id; ?>").hide();
 
-                      $(".emo-<?php echo $post_id; ?>").click(function () {
-                          $(".emo-<?php echo $post_id; ?>").removeClass("active");
+                      $(".client-<?php echo $post_id; ?>").click(function () {
+                          $(".client-<?php echo $post_id; ?>").removeClass("active");
                           $(this).addClass("active");
                           $("#div1-<?php echo $post_id; ?>").slideDown(200);
                           $("#div2-<?php echo $post_id; ?>, #div3-<?php echo $post_id; ?>").slideUp(200);
                       });
 
-                      $(".emo1-<?php echo $post_id; ?>").click(function () {
-                          $(".emo1-<?php echo $post_id; ?>").removeClass("active");
+                      $(".personal-<?php echo $post_id; ?>").click(function () {
+                          $(".personal-<?php echo $post_id; ?>").removeClass("active");
                           $(this).addClass("active");
                           $("#div2-<?php echo $post_id; ?>").slideDown(200);
                           $("#div1-<?php echo $post_id; ?>, #div3-<?php echo $post_id; ?>").slideUp(200);
                       });
 
-                      $(".emo2-<?php echo $post_id; ?>").click(function () {
-                          $(".emo2-<?php echo $post_id; ?>").removeClass("active");
+                      $(".demo-<?php echo $post_id; ?>").click(function () {
+                          $(".demo-<?php echo $post_id; ?>").removeClass("active");
                           $(this).addClass("active");
                           $("#div3-<?php echo $post_id; ?>").slideDown(200);
                           $("#div1-<?php echo $post_id; ?>, #div2-<?php echo $post_id; ?>").slideUp(200);
@@ -414,18 +414,18 @@ div#prog {
                       // ----------------------Click with underline------------------
 
                       $(document).ready(function() {
-                        $('.temp1').click(function() {
+                        $('.client1').click(function() {
                             $(this).addClass('clicked');
-                            $('.temp2, .temp3').removeClass('clicked'); // Remove the class from other elements
+                            $('.personal2, .demo3').removeClass('clicked'); // Remove the class from other elements
                         });
 
-                        $('.temp2').click(function() {
+                        $('.personal2').click(function() {
                             $(this).addClass('clicked');
-                            $('.temp1, .temp3').removeClass('clicked'); // Remove the class from other elements
+                            $('.client1, .demo3').removeClass('clicked'); // Remove the class from other elements
                         });
-                        $('.temp3').click(function() {
+                        $('.demo3').click(function() {
                             $(this).addClass('clicked');
-                            $('.temp1, .temp2').removeClass('clicked'); // Remove the class from other elements
+                            $('.client1, .personal2').removeClass('clicked'); // Remove the class from other elements
                         });
                     });
 
